@@ -1,0 +1,14 @@
+n = int(input())
+a=[]
+for i in range(n):
+    a.append(int(input()))
+td=0
+
+for i in range(n-1):
+    for j in range(i+1):
+        if a[i+1-j]<a[i-j]:
+            td=a[i+1-j]
+            a[i+1-j]=a[i-j]
+            a[i-j]=td
+
+print(*a, sep='\n')
