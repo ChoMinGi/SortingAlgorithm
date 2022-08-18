@@ -1,7 +1,8 @@
-list = [1, 2, 3, 4, 45, 5, 67, 8, 9, 6]
-
-print(list[-1])
-print(list[len(list)-1])
-
-list = list[:-1]
-print(list)
+import sys
+input = sys.stdin.readline
+m = 10001
+l = [0]*m
+for _ in range(int(input())):
+    l[int(input())] += 1
+for i in range(1, m):
+    print(f"{i}\n"*l[i], end="")
